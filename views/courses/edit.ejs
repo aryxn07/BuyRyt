@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buyRyt</title>
+</head>
+<body>
+    <h3>Edit listing</h3>
+    <form action="/courses/<%=course._id %>?_method=PUT" method="post">
+        <input name="course[title]" value="<%= course.title %>" type="text">
+        <br>
+        <textarea name="course[description]" ><%= course.description%></textarea>
+        <br>
+        <input name="course[image]"  value="<%= course.image %>" type="text">
+        <br>
+        <input name="course[price]" value="<%= course.price %>" >
+        <input name="course[author]"  value="<%= course.author %>" type="text">
+        <br>
+        <input name="course[rating]"  value="<%= course.rating %>" type="text">
+        <br>
+        <input name="course[language]"  value="<%= course.language %>" type="text">
+        <br>
+        <button>edit</button>
+    </form>
+</body>
+</html>

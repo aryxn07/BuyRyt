@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Course Detail</h3>
+    <ul>
+        <li><%= course.title %></li>
+        <li><%= course.description %></li>
+        <li><%= course.image %></li>
+        <li> &#8377; <%= course.price.toLocaleString("en-IN") %></li>
+        <li><%= course.author %></li>
+        <li><%= course.rating%></li>
+    </ul>
+    <br>
+    <a href="/courses/<%= course._id %>/edit">Edit this course</a>
+    <form method="post" action="/courses/<%= course._id %>?_method=DELETE ">
+        <button>Delete this course</button>
+    </form>
+</body>
+</html>
