@@ -1,28 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<% layout("/layouts/boilerplate") %>
+
 <body>
-    <h3>create a new listing</h3>
-    <form action="/courses" method="post">
-        <input name="course[title]" placeholder="enter title" type="text">
-        <br>
-        <textarea name="course[description]" placeholder="enter description"></textarea>
-        <br>
-        <input name="course[image]" placeholder="enter image url" type="text">
-        <br>
-        <input name="course[price]" placeholder="enter price" type="text">
-        <br>
-        <input name="course[author]" placeholder="enter author" type="text">
-        <br>
-        <input name="course[rating]" placeholder="enter rating" type="text">
-        <br>
-        <input name="course[language]" placeholder="enter language" type="text">
-        <br>
-        <button>add</button>
-    </form>
+    <br><br>
+    <h3>Upload A Course</h3>
+    <div class="form">
+        <form action="/courses" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="course[title]" class="form-control" placeholder="Enter Title" required>
+                <div class="valid-feedback">Title is great</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea type="text" name="course[description]" class="form-control"
+                    placeholder="Enter Your Description" required></textarea>
+                    <div class="invalid-feedback">Description required</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="image" class="form-label">Image Link</label>
+                <input type="text" name="course[image]" class="form-control" placeholder="Enter Img Link">
+            </div>
+           
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" name="course[price]" class="form-control" placeholder="Enter Price" required>
+                <div class="valid-feedback">good price</div>
+                <div class="invalid-feedback">Enter resonable price</div>
+            </div>
+            <div class="same-line">
+                <div class="mb-3">
+                    <label for="author" class="form-label">Author</label>
+                    <input type="text" name="course[author]" class="form-control" placeholder="Your Name" required>
+                    <div class="valid-feedback">You are famous</div>
+                    <div class="invalid-feedback">who are you sir?</div>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="language" class="form-label">Language</label>
+                    <input type="text" name="course[language]" class="form-control" placeholder=" Enter Language" required>
+                    <div class="valid-feedback">Great</div>
+                    <div class="invalid-feedback">Course is in which language?</div>
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <input type="number" name="course[rating]" class="form-control" placeholder="Enter Price" required>
+                <div class="valid-feedback">Pretty Good</div>
+                <div class="invalid-feedback">Rating Required</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+   
 </body>
-</html>

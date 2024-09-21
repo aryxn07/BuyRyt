@@ -1,0 +1,138 @@
+body{
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 400 !important;
+        background-color: #F5F5F5 !important;
+         
+}
+.container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar{
+    height: 4rem;
+    background-color: #E5D9F2;
+}
+.fa-book-open-reader{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+/* Carousel */
+.carousel{
+    width: 40%;
+    margin: 2rem;
+}
+
+.row{
+    justify-content: center;
+    display: flex;
+}
+
+/* FOOTER */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+}
+
+/* .f-info-links{
+    width: 100%;
+} */
+
+.f-info-socials {
+    padding-top: 6px;
+}
+.f-info-socials i{
+   font-size: 1.2rem;
+   margin-right: 1rem;
+}
+
+.f-info{
+    height: 5rem;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Cards */
+.card{
+    margin: 10px;
+    width: 30%;
+    background-color: #F5F5F5 !important;
+}
+.row{
+display: flex;
+flex-direction: row;
+}
+.card-img{
+    border-radius: 1rem;
+    padding-top: 10px;
+}
+.card-img:hover{
+opacity: 0.8;
+}
+
+.btn-primary{
+    background-color: #A594F9 !important;
+    border-style: none !important;
+    width: 5rem;
+}
+
+/* NEW COURSE */
+.form{
+    justify-content: center;
+    width: 50%;
+}
+
+.same-line{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+}
+
+/* EDIT COURSE */
+
+
+
+
+/* SHOW COURSE */
+.show-card{
+width: 60%;
+}
+.show-card img{
+    height: 100%;
+    border-radius: 5px;
+}
+.show-row{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #E5D9F2;
+    border-radius: 5px;
+}
+#show-body{
+    padding: 13px;
+}
+#description{
+    padding-top: 9px;
+}
+#show{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    height: 2rem;
+    margin: 1rem 0;
+}
+#show a{
+    text-decoration: none;
+    color: #ebebeb;
+    
+}
+#show button{
+    margin-left: 15px;
+    height: 2rem;
+}

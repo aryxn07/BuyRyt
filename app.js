@@ -4,6 +4,7 @@ const mongoose= require("mongoose");
 const Course =require("./models/course.js");
 const path =require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 const MONGO_URL="mongodb://127.0.0.1:27017/buyRyt"
 
@@ -22,6 +23,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname,"views"));
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
+app.engine('ejs', ejsMate);
+app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/", (req,res) =>{
     res.send("Hi there");
@@ -51,7 +54,7 @@ app.post("/courses",async (req,res) =>{
     // let{title,description,image,price,country,location} = req.body;       course[title] -> course ko object bna denge
         const newCourse=new Course(req.body.course);
         await newCourse.save();
-        res.redirect("/coursesS");
+        res.redirect("/courses");
 })
 
 
